@@ -34,9 +34,8 @@ jobs:
       - name: Build
         run: npm run build
         env:
-          # Se o repositório não está na raiz, ajuste o base path
-          # Exemplo: VITE_BASE_PATH: '/your-digital-corner/'
-          VITE_BASE_PATH: '/'
+          # Base path para GitHub Pages (nome do repositório)
+          VITE_BASE_PATH: '/studio-dev/'
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
