@@ -1,5 +1,6 @@
 import { MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { config } from "@/lib/config";
 
 interface WhatsAppButtonProps {
   message?: string;
@@ -12,8 +13,8 @@ interface WhatsAppButtonProps {
 }
 
 const WhatsAppButton = ({
-  message = "Olá! Gostaria de saber mais sobre os serviços.",
-  phone = "5500000000000",
+  message = config.whatsapp.defaultMessage,
+  phone = config.whatsapp.phone,
   className = "",
   variant = "default",
   size = "default",
