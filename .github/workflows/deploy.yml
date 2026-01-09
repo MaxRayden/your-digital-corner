@@ -35,7 +35,8 @@ jobs:
         run: npm run build
         env:
           # Base path para GitHub Pages (nome do repositório)
-          VITE_BASE_PATH: '/studio-dev/'
+          # IMPORTANTE: Deve corresponder ao nome do repositório no GitHub
+          VITE_BASE_PATH: '/your-digital-corner/'
 
       - name: Setup Pages
         uses: actions/configure-pages@v4

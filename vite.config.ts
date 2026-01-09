@@ -7,7 +7,8 @@ import { componentTagger } from "lovable-tagger";
 export default defineConfig(({ mode }) => {
   // Base path para GitHub Pages (será substituído pelo workflow)
   // Se o repositório não está na raiz, use: base: '/nome-do-repositorio/'
-  const base = process.env.VITE_BASE_PATH || '/studio-dev/';
+  // IMPORTANTE: Deve corresponder ao nome do repositório no GitHub
+  const base = process.env.VITE_BASE_PATH || '/your-digital-corner/';
   
   return {
     base,
