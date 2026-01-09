@@ -15,7 +15,7 @@ export const config = {
    * IMPORTANTE: Remova o 9 inicial se o número tiver (ex: (11) 99999-9999 vira 5511999999999)
    */
   whatsapp: {
-    phone: "55929988135123", // ⬅️ CONFIGURE SEU NÚMERO AQUI
+    phone: "5592988135123", // ⬅️ CONFIGURE SEU NÚMERO AQUI
     defaultMessage: "Olá! Gostaria de saber mais sobre os serviços.",
   },
 
