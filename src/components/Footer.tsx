@@ -26,22 +26,46 @@ const Footer = () => {
             <h4 className="font-semibold">Links Rápidos</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li>
-                <Link to="/" className="hover:text-primary transition-colors">
+                <Link 
+                  to="/" 
+                  className="hover:text-primary transition-colors"
+                  onClick={() => {
+                    setTimeout(() => window.scrollTo(0, 0), 100);
+                  }}
+                >
                   Início
                 </Link>
               </li>
               <li>
-                <Link to="/servicos" className="hover:text-primary transition-colors">
+                <Link 
+                  to="/servicos" 
+                  className="hover:text-primary transition-colors"
+                  onClick={() => {
+                    setTimeout(() => window.scrollTo(0, 0), 100);
+                  }}
+                >
                   Serviços
                 </Link>
               </li>
               <li>
-                <Link to="/precos" className="hover:text-primary transition-colors">
+                <Link 
+                  to="/precos" 
+                  className="hover:text-primary transition-colors"
+                  onClick={() => {
+                    setTimeout(() => window.scrollTo(0, 0), 100);
+                  }}
+                >
                   Preços
                 </Link>
               </li>
               <li>
-                <Link to="/segmentos" className="hover:text-primary transition-colors">
+                <Link 
+                  to="/segmentos" 
+                  className="hover:text-primary transition-colors"
+                  onClick={() => {
+                    setTimeout(() => window.scrollTo(0, 0), 100);
+                  }}
+                >
                   Segmentos
                 </Link>
               </li>

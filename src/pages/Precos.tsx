@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { Check, X, Info, Server, Cloud } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -13,6 +14,10 @@ import {
 } from "@/components/ui/table";
 
 const PrecosPage = () => {
+  // Scroll para o topo quando a página carrega
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const priceTable = [
     {
       service: "Página simples",

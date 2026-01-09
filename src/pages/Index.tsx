@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import {
@@ -25,6 +26,10 @@ import ServiceCard from "@/components/ServiceCard";
 import ProcessStep from "@/components/ProcessStep";
 
 const Index = () => {
+  // Scroll para o topo quando a página carrega
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const audienceData = [
     {
       icon: Users,
@@ -245,9 +250,17 @@ const Index = () => {
                   asChild
                   variant="outline"
                   size="lg"
-                  className="w-full sm:w-auto border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10"
+                  className="w-full sm:w-auto border-primary-foreground/70 text-background hover:bg-background/10 hover:border-primary-foreground bg-background/5"
                 >
-                  <Link to="/precos">Ver preços</Link>
+                  <Link 
+                    to="/precos"
+                    onClick={() => {
+                      // Garante scroll para o topo após navegação
+                      setTimeout(() => window.scrollTo(0, 0), 100);
+                    }}
+                  >
+                    Ver preços
+                  </Link>
                 </Button>
               </div>
             </div>

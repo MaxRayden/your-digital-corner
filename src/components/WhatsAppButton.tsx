@@ -38,16 +38,21 @@ const WhatsAppButton = ({
     );
   }
 
+  // Aplica cores do WhatsApp apenas quando variant é "default"
+  const buttonClassName = variant === "default" 
+    ? `bg-whatsapp hover:bg-whatsapp/90 text-whatsapp-foreground ${className}`
+    : className;
+
   return (
     <Button
       asChild
       variant={variant}
       size={size}
-      className={`bg-whatsapp hover:bg-whatsapp/90 text-whatsapp-foreground ${className}`}
+      className={buttonClassName}
     >
-      <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
-        <MessageCircle className="h-4 w-4 mr-2" />
-        {children || "Falar no WhatsApp"}
+      <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="flex items-center break-words min-w-0">
+        <MessageCircle className="h-4 w-4 mr-2 shrink-0" />
+        <span className="break-words min-w-0">{children || "Falar no WhatsApp"}</span>
       </a>
     </Button>
   );

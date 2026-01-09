@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import {
   FileText,
@@ -13,6 +14,10 @@ import ServiceCard from "@/components/ServiceCard";
 import PricingCard from "@/components/PricingCard";
 
 const ServicosPage = () => {
+  // Scroll para o topo quando a página carrega
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const servicesData = [
     {
       icon: FileText,

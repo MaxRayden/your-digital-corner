@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import {
   Store,
   Church,
@@ -19,6 +20,11 @@ import SegmentCard from "@/components/SegmentCard";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 
 const SegmentosPage = () => {
+  // Scroll para o topo quando a página carrega
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const segments = [
     {
       icon: Store,

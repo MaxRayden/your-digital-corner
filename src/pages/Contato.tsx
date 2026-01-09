@@ -43,7 +43,7 @@ const ContatoPage = () => {
       message: "Olá! Tenho algumas dúvidas sobre os serviços.",
     },
     {
-      title: "Quero uma página simples",
+      title: "Página simples",
       message: "Olá! Tenho interesse em uma página simples para meu negócio.",
     },
     {
@@ -92,9 +92,9 @@ const ContatoPage = () => {
                           <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-accent text-accent-foreground">
                             <info.icon className="h-5 w-5" />
                           </div>
-                          <div className="space-y-1">
+                          <div className="space-y-1 min-w-0 flex-1">
                             <p className="text-sm text-muted-foreground">{info.title}</p>
-                            <p className="font-medium">{info.value}</p>
+                            <p className="font-medium break-words break-all">{info.value}</p>
                             <p className="text-xs text-muted-foreground">{info.description}</p>
                           </div>
                         </div>
@@ -157,9 +157,9 @@ const ContatoPage = () => {
                   key={index}
                   variant="outline"
                   message={msg.message}
-                  className="h-auto py-4 px-6 justify-start bg-background hover:bg-accent border-border hover:border-primary/50"
+                  className="h-auto py-4 px-6 justify-start bg-background hover:bg-accent border-border hover:border-primary/50 text-foreground break-words"
                 >
-                  <span className="text-left">{msg.title}</span>
+                  <span className="text-left break-words">{msg.title}</span>
                 </WhatsAppButton>
               ))}
             </div>
