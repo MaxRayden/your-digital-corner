@@ -13,6 +13,7 @@ import NotFound from "./pages/NotFound";
 const queryClient = new QueryClient();
 
 // Base path para GitHub Pages (deve corresponder ao base do vite.config.ts)
+// No Vercel, BASE_URL será '/', no GitHub Pages será '/your-digital-corner/'
 const basename = import.meta.env.BASE_URL || '/';
 
 const App = () => (
