@@ -5,12 +5,10 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => {
-  // Base path: 
-  // - No Vercel: '/' (raiz, sem subdiretório)
-  // - No GitHub Pages: '/your-digital-corner/' (nome do repositório)
-  // O Vercel não precisa de base path, então usamos '/' como padrão
-  // O GitHub Actions sobrescreve com VITE_BASE_PATH
-  const base = process.env.VITE_BASE_PATH || '/';
+  // Base path para GitHub Pages
+  // IMPORTANTE: Deve corresponder ao nome do repositório no GitHub
+  // O GitHub Actions sobrescreve com VITE_BASE_PATH, mas usamos '/your-digital-corner/' como padrão
+  const base = process.env.VITE_BASE_PATH || '/your-digital-corner/';
   
   return {
     base,
