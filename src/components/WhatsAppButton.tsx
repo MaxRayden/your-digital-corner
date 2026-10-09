@@ -30,7 +30,7 @@ const WhatsAppButton = ({
         href={whatsappUrl}
         target="_blank"
         rel="noopener noreferrer"
-        className={`fixed bottom-6 right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-whatsapp text-whatsapp-foreground shadow-lg hover:scale-110 transition-transform duration-200 ${className}`}
+        className={`fixed z-50 flex h-14 w-14 items-center justify-center rounded-full bg-whatsapp text-whatsapp-foreground shadow-lg hover:scale-110 transition-transform duration-200 bottom-[max(1.25rem,env(safe-area-inset-bottom))] right-[max(1.25rem,env(safe-area-inset-right))] ${className}`}
         aria-label="Falar no WhatsApp"
       >
         <MessageCircle className="h-6 w-6" />

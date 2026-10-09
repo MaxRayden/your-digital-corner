@@ -4,17 +4,12 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
-import Servicos from "./pages/Servicos";
-import Precos from "./pages/Precos";
-import Segmentos from "./pages/Segmentos";
-import Contato from "./pages/Contato";
 import NotFound from "./pages/NotFound";
+import RedirectToHash from "./components/RedirectToHash";
 
 const queryClient = new QueryClient();
 
-// Base path para GitHub Pages (deve corresponder ao base do vite.config.ts)
-// No Vercel, BASE_URL será '/', no GitHub Pages será '/your-digital-corner/'
-const basename = import.meta.env.BASE_URL || '/';
+const basename = import.meta.env.BASE_URL || "/";
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
@@ -24,10 +19,10 @@ const App = () => (
       <BrowserRouter basename={basename}>
         <Routes>
           <Route path="/" element={<Index />} />
-          <Route path="/servicos" element={<Servicos />} />
-          <Route path="/precos" element={<Precos />} />
-          <Route path="/segmentos" element={<Segmentos />} />
-          <Route path="/contato" element={<Contato />} />
+          <Route path="/servicos" element={<RedirectToHash hash="#servicos" />} />
+          <Route path="/precos" element={<RedirectToHash hash="#servicos" />} />
+          <Route path="/segmentos" element={<RedirectToHash hash="#trabalhos" />} />
+          <Route path="/contato" element={<RedirectToHash hash="#contato" />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

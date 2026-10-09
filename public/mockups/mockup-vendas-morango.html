@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mockup - Morango Cravejado</title>
+<style>
+:root{
+  --vinho:#2A0A10;
+  --dourado:#F0C14B;
+  --vermelho:#E31C3D;
+  --creme:#F7F0E8;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;background:#1a0a0e;color:#2a1a18;-webkit-font-smoothing:antialiased}
+.serif{font-family:Georgia,'Times New Roman',serif}
+.wrap{max-width:430px;margin:0 auto;background:var(--creme);min-height:100vh;box-shadow:0 0 40px rgba(0,0,0,.4);position:relative;padding-bottom:72px}
+.proposta{background:#111;color:#fff;font-size:12px;text-align:center;padding:8px 12px}
+.proposta b{color:var(--dourado)}
+.urgency{background:var(--vinho);color:#fff;font-size:12px;text-align:center;padding:10px 14px;line-height:1.4}
+.urgency strong{color:var(--dourado)}
+.vsl{background:#000;aspect-ratio:16/10;display:flex;align-items:center;justify-content:center;color:var(--dourado);font-size:13px;text-align:center;padding:20px}
+.hero{padding:28px 20px 20px;background:linear-gradient(180deg,var(--vinho) 0%,#3a1018 100%);color:#fff}
+.badge{display:inline-block;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--dourado);border:1px solid rgba(240,193,75,.4);border-radius:999px;padding:5px 12px;margin-bottom:12px}
+.hero h1{font-size:24px;font-weight:700;line-height:1.25}
+.hero h1 span{color:var(--dourado)}
+.hero p{margin-top:12px;font-size:14.5px;line-height:1.5;color:#e8d5d0}
+.btn{display:block;width:100%;text-align:center;background:var(--vermelho);color:#fff;text-decoration:none;border-radius:999px;padding:15px;font-size:15px;font-weight:700;margin-top:16px}
+.conteudo{padding:16px 16px 20px}
+.card{background:#fff;border-radius:18px;padding:18px;box-shadow:0 6px 20px rgba(42,10,16,.1);margin-bottom:14px}
+.card h2{font-size:11.5px;letter-spacing:2px;text-transform:uppercase;color:var(--vermelho);margin-bottom:8px}
+.card h3{font-size:19px;font-weight:normal;margin-bottom:8px;font-family:Georgia,serif}
+.card p,.card li{font-size:14px;line-height:1.55;color:#5a4a48}
+.check{list-style:none;margin-top:8px}
+.check li{padding:7px 0;border-bottom:1px solid #f0e6de;display:flex;gap:8px}
+.check i{color:var(--vermelho);font-style:normal;font-weight:700}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px}
+.stat{background:#fff8f2;border-radius:12px;padding:12px;text-align:center}
+.stat strong{display:block;font-size:22px;color:var(--vinho);font-family:Georgia,serif}
+.stat span{font-size:11.5px;color:#8a7a76}
+.sticky{position:fixed;left:50%;bottom:0;transform:translateX(-50%);width:100%;max-width:430px;background:rgba(42,10,16,.95);padding:12px 16px;backdrop-filter:blur(8px)}
+.sticky .btn{margin:0}
+.nota{padding:14px;border:1.5px dashed #c9a090;border-radius:12px;font-size:12.5px;line-height:1.5;color:#6b5a54;background:#fbf6f0;margin-bottom:16px}
+.nota b{color:var(--vinho)}
+.rodape{text-align:center;font-size:12px;color:#9a8a84;padding:6px 0 16px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="proposta"><b>PROPOSTA DE LAYOUT</b> · rascunho para apresentação, não é o site oficial</div>
+  <div class="urgency"><strong>ATENÇÃO:</strong> unidades limitadas com bônus — encerra em <strong>02:14:33</strong></div>
+  <div class="vsl">▶ Bloco VSL<br><small style="opacity:.7">vídeo de vendas / apresentação</small></div>
+  <header class="hero">
+    <span class="badge">Receita viral para vender</span>
+    <h1>O doce que está lotando encomendas pode ser o <span>seu produto mais lucrativo</span></h1>
+    <p>Morango Cravejado — receita em PDF + 5 receitas virais de bônus. Visual que vende no Instagram.</p>
+    <a class="btn" href="#investimento">Quero a Receita Agora →</a>
+  </header>
+  <main class="conteudo">
+    <section class="card">
+      <h2>Prova rápida</h2>
+      <div class="stats">
+        <div class="stat"><strong>PDF</strong><span>passo a passo</span></div>
+        <div class="stat"><strong>+5</strong><span>receitas bônus</span></div>
+      </div>
+    </section>
+    <section class="card">
+      <h2>Para quem é</h2>
+      <h3>Você se identifica?</h3>
+      <ul class="check">
+        <li><i>✓</i> Quer vender doces com visual gourmet</li>
+        <li><i>✓</i> Precisa de precificação e receita clara</li>
+        <li><i>✓</i> Quer começar sem enrolação</li>
+      </ul>
+    </section>
+    <section class="card" id="investimento">
+      <h2>Oferta</h2>
+      <h3>Receita + bônus</h3>
+      <p>Checkout direto (Kiwify / Hotmart). Urgência, garantia e CTA sticky no mobile.</p>
+      <a class="btn" href="#">Garantir minha receita</a>
+    </section>
+    <div class="nota">
+      <b>Notas da proposta:</b><br>
+      · Funil agressivo: urgência + VSL + sticky CTA.<br>
+      · Paleta vinho / dourado / vermelho de conversão.<br>
+      · Site ao vivo disponível no portfólio.
+    </div>
+    <p class="rodape">© Morango Cravejado · mockup MR Developer</p>
+  </main>
+  <div class="sticky">
+    <a class="btn" href="#investimento">Quero a Receita Agora →</a>
+  </div>
+</div>
+</body>
+</html>

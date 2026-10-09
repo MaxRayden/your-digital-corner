@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mockup - Lives Palomino</title>
+<style>
+:root{
+  --preto:#0f0d0e;
+  --grafite:#1b1819;
+  --dourado:#d4af6a;
+  --dourado-claro:#f0d9a8;
+  --rose:#e8b4b8;
+  --rose-escuro:#c97b84;
+  --creme:#faf4ee;
+  --texto:#2a2224;
+  --ex:#fff4d6;
+  --ex-borda:#e5c46b;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;background:#d9d2cc;color:var(--texto);-webkit-font-smoothing:antialiased}
+.serif{font-family:Georgia,'Times New Roman',serif}
+.wrap{max-width:430px;margin:0 auto;background:var(--creme);min-height:100vh;box-shadow:0 0 40px rgba(0,0,0,.18);position:relative}
+
+.proposta{background:#000;color:#fff;font-size:12px;text-align:center;padding:8px 12px;letter-spacing:.3px}
+.proposta b{color:var(--dourado)}
+
+.hero{background:radial-gradient(120% 90% at 50% 0%,#2b2224 0%,var(--preto) 70%);color:#fff;text-align:center;padding:34px 22px 54px}
+.foto{width:96px;height:96px;border-radius:50%;margin:0 auto 14px;padding:3px;background:linear-gradient(135deg,var(--dourado),var(--rose),var(--dourado))}
+.foto div{width:100%;height:100%;border-radius:50%;background:var(--grafite);display:flex;align-items:center;justify-content:center;font-size:10.5px;color:var(--dourado-claro);text-align:center;line-height:1.3;padding:10px}
+.tag{font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:var(--rose)}
+.hero h1{font-size:29px;font-weight:normal;margin:8px 0 0;line-height:1.2}
+.hero h1 em{color:var(--dourado);font-style:normal}
+.hero p{margin:14px auto 0;font-size:15px;line-height:1.5;max-width:310px;color:#e9dfd8}
+
+.chips{display:flex;gap:8px;overflow-x:auto;padding:12px 16px;background:var(--preto);position:sticky;top:0;z-index:10}
+.chips a{flex:0 0 auto;font-size:12.5px;color:var(--dourado-claro);text-decoration:none;border:1px solid #4a3f33;border-radius:999px;padding:7px 13px}
+
+.conteudo{padding:18px 16px 96px}
+.card{background:#fff;border-radius:20px;padding:20px;box-shadow:0 6px 20px rgba(15,13,14,.10);margin-bottom:16px;scroll-margin-top:60px}
+.card h2{font-size:11.5px;letter-spacing:2.2px;text-transform:uppercase;color:var(--rose-escuro);margin-bottom:6px}
+.card h3{font-size:20px;font-weight:normal;margin-bottom:10px;line-height:1.25}
+.card p{font-size:14.5px;line-height:1.55;color:#5b4e51}
+
+.ex{display:inline-block;background:var(--ex);border:1px solid var(--ex-borda);color:#8a6a10;font-size:10.5px;font-weight:600;letter-spacing:.5px;text-transform:uppercase;border-radius:6px;padding:2px 7px;margin-left:6px;vertical-align:middle}
+
+.check{list-style:none;margin-top:12px}
+.check li{display:flex;gap:10px;align-items:flex-start;font-size:14.5px;line-height:1.45;padding:9px 0;border-bottom:1px solid #f1e7df}
+.check li:last-child{border:0}
+.check i{flex:0 0 22px;height:22px;border-radius:50%;background:var(--preto);color:var(--dourado);font-style:normal;font-size:12px;display:flex;align-items:center;justify-content:center;margin-top:1px}
+
+.metas{display:grid;gap:10px;margin-top:14px}
+.meta{border:1.5px solid #eadccf;border-radius:16px;padding:14px 16px;background:#fffaf5;display:flex;align-items:center;gap:14px}
+.meta.dest{background:var(--preto);color:#fff;border-color:var(--preto)}
+.meta .val{flex:0 0 74px;font-size:26px;color:var(--rose-escuro);font-family:Georgia,serif}
+.meta.dest .val{color:var(--dourado)}
+.meta strong{display:block;font-size:15px}
+.meta span{font-size:12.5px;color:#8a7b7e;line-height:1.35;display:block;margin-top:2px}
+.meta.dest span{color:#cfc3bc}
+
+.grid3{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:14px}
+.print{aspect-ratio:3/4;border-radius:14px;border:1.5px dashed #cdb8a9;background:repeating-linear-gradient(45deg,#fbf5ef,#fbf5ef 10px,#f6ede4 10px,#f6ede4 20px);display:flex;align-items:center;justify-content:center;text-align:center;padding:10px;font-size:12px;line-height:1.35;color:#8a7767}
+
+.videos{display:flex;gap:10px;overflow-x:auto;margin-top:14px;padding-bottom:4px}
+.video{flex:0 0 138px;aspect-ratio:9/16;border-radius:16px;background:linear-gradient(160deg,#2b2224,#0f0d0e);position:relative;display:flex;align-items:center;justify-content:center;color:var(--dourado-claro);text-align:center;font-size:11.5px;padding:10px}
+.video::before{content:"▶";position:absolute;top:50%;left:50%;transform:translate(-50%,-70%);width:42px;height:42px;border-radius:50%;background:rgba(212,175,106,.92);color:var(--preto);display:flex;align-items:center;justify-content:center;font-size:16px;padding-left:3px}
+.video span{position:absolute;bottom:12px;left:8px;right:8px}
+
+.depo{border-left:3px solid var(--rose);padding:2px 0 2px 14px;margin-top:14px;font-size:15px;line-height:1.5;font-style:italic;color:#6d5f62}
+.depo small{display:block;margin-top:6px;font-style:normal;font-size:12px;color:#a8999c}
+
+details{border-bottom:1px solid #f1e7df;padding:12px 0}
+details:last-of-type{border:0}
+summary{font-size:15px;cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:10px}
+summary::after{content:"+";color:var(--rose-escuro);font-size:20px;line-height:1}
+details[open] summary::after{content:"–"}
+details p{margin-top:8px;font-size:14px}
+
+.aviso{background:#f6efe8;border-radius:14px;padding:14px;font-size:12.5px;line-height:1.5;color:#7b6c6f;margin-bottom:16px}
+
+label{display:block;font-size:12.5px;color:#7b6c6f;margin:12px 0 5px}
+input,select{width:100%;padding:13px 14px;border-radius:12px;border:1px solid #e6d9d1;background:#fdf9f5;font-size:15px;color:var(--texto);font-family:inherit}
+.chk{display:flex;gap:10px;align-items:flex-start;margin-top:14px;font-size:13.5px;line-height:1.4;color:#5b4e51}
+.chk input{width:20px;height:20px;flex:0 0 20px;margin-top:1px}
+
+.btn{display:flex;align-items:center;justify-content:center;width:100%;text-align:center;text-decoration:none;border:0;border-radius:999px;padding:16px;font-size:15px;font-weight:600;cursor:pointer;background:linear-gradient(135deg,var(--dourado),#b98f47);color:var(--preto)}
+
+.sticky{position:sticky;bottom:0;padding:12px 16px 16px;background:linear-gradient(to top,var(--creme) 70%,rgba(250,244,238,0))}
+
+.nota{margin:0 0 20px;padding:14px;border:1.5px dashed #c9b3a3;border-radius:12px;font-size:12.5px;line-height:1.6;color:#6d5f62;background:#fbf6f0}
+.nota b{color:var(--rose-escuro)}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="proposta"><b>PROPOSTA DE LAYOUT</b> · rascunho, textos e números são exemplos</div>
+
+  <header class="hero">
+    <div class="foto"><div>[ foto dela ]</div></div>
+    <span class="tag">Palomino · @sgbypalomino</span>
+    <h1 class="serif">Quer fazer <em>lives</em> comigo?<br>Tire suas dúvidas aqui.</h1>
+    <p>Está tudo explicado nesta página: o que precisa, como funciona e o que esperar. Depois é só me chamar para finalizar.</p>
+  </header>
+
+  <nav class="chips">
+    <a href="#comecar">Para começar</a>
+    <a href="#metas">Metas</a>
+    <a href="#resultados">Resultados</a>
+    <a href="#videos">Vídeos</a>
+    <a href="#depoimentos">Depoimentos</a>
+    <a href="#duvidas">Dúvidas</a>
+  </nav>
+
+  <main class="conteudo">
+
+    <section class="card" id="comecar">
+      <h2>Para começar <span class="ex">exemplo</span></h2>
+      <h3 class="serif">O que você precisa</h3>
+      <p>Confira se você já tem o básico. Se tiver, é só seguir para o final da página.</p>
+      <ul class="check">
+        <li><i>✓</i> Ter 18 anos ou mais</li>
+        <li><i>✓</i> Celular que rode o aplicativo, com boa internet</li>
+        <li><i>✓</i> Documento com foto para o cadastro</li>
+        <li><i>✓</i> Disponibilidade de horários fixos na semana</li>
+        <li><i>✓</i> Vontade de aprender e de ser constante</li>
+      </ul>
+    </section>
+
+    <section class="card" id="metas">
+      <h2>Metas <span class="ex">exemplo</span></h2>
+      <h3 class="serif">Quanto você precisa fazer por mês</h3>
+      <p>Para continuar ativa no programa existe uma meta mínima mensal. Veja os níveis:</p>
+      <div class="metas">
+        <div class="meta">
+          <div class="val">10k</div>
+          <div><strong>Meta mínima</strong><span>[ex.: X horas por dia, Y dias por mês]</span></div>
+        </div>
+        <div class="meta dest">
+          <div class="val">20k</div>
+          <div><strong>Nível intermediário</strong><span>[ex.: benefícios e condições melhores]</span></div>
+        </div>
+        <div class="meta">
+          <div class="val">+</div>
+          <div><strong>Níveis avançados</strong><span>[ex.: bônus e acompanhamento próximo]</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="card" id="resultados">
+      <h2>Resultados <span class="ex">exemplo</span></h2>
+      <h3 class="serif">Prints reais de quem já está dentro</h3>
+      <p>Aqui entram os comprovantes das meninas, sempre com autorização delas.</p>
+      <div class="grid3">
+        <div class="print">[ print real 1<br>com autorização ]</div>
+        <div class="print">[ print real 2<br>com autorização ]</div>
+        <div class="print">[ print real 3<br>com autorização ]</div>
+        <div class="print">[ print real 4<br>com autorização ]</div>
+      </div>
+    </section>
+
+    <section class="card" id="videos">
+      <h2>Na prática <span class="ex">exemplo</span></h2>
+      <h3 class="serif">Presentes dentro da live</h3>
+      <p>Veja como é uma live de verdade, com as meninas recebendo presentes.</p>
+      <div class="videos">
+        <div class="video"><span>[ vídeo 1 ]</span></div>
+        <div class="video"><span>[ vídeo 2 ]</span></div>
+        <div class="video"><span>[ vídeo 3 ]</span></div>
+      </div>
+    </section>
+
+    <section class="card" id="depoimentos">
+      <h2>Depoimentos <span class="ex">exemplo</span></h2>
+      <h3 class="serif">Quem já começou</h3>
+      <div class="depo">[ depoimento real, em texto ou vídeo curto ]<small>— Nome, @perfil</small></div>
+      <div class="depo">[ outro depoimento real ]<small>— Nome, @perfil</small></div>
+    </section>
+
+    <section class="card" id="duvidas">
+      <h2>Dúvidas <span class="ex">exemplo</span></h2>
+      <h3 class="serif">Perguntas frequentes</h3>
+      <details><summary>Preciso ter experiência?</summary><p>[resposta dela: ex. não precisa, eu te oriento desde o começo]</p></details>
+      <details><summary>Preciso aparecer o rosto?</summary><p>[resposta dela]</p></details>
+      <details><summary>Quanto tempo por dia preciso ficar na live?</summary><p>[resposta dela]</p></details>
+      <details><summary>Como e quando recebo?</summary><p>[resposta dela: forma e data do pagamento]</p></details>
+      <details><summary>Tem algum custo para entrar?</summary><p>[resposta dela]</p></details>
+    </section>
+
+    <div class="aviso">
+      Os resultados variam de pessoa para pessoa e dependem de dedicação, constância e das regras da plataforma. Não há garantia de ganhos.
+    </div>
+
+    <section class="card" id="contato">
+      <h2>Última etapa</h2>
+      <h3 class="serif">Pronta para começar?</h3>
+      <p>Responda rapidinho e eu finalizo o seu atendimento pelo WhatsApp.</p>
+
+      <label for="n">Seu nome</label>
+      <input id="n" type="text" placeholder="Como posso te chamar?">
+
+      <label for="i">Seu @ no Instagram</label>
+      <input id="i" type="text" placeholder="@seuperfil">
+
+      <label for="e">Você já fez lives antes?</label>
+      <select id="e">
+        <option>Nunca fiz</option>
+        <option>Já fiz algumas</option>
+        <option>Já faço regularmente</option>
+      </select>
+
+      <label for="d">Quantas horas por dia pode se dedicar?</label>
+      <select id="d">
+        <option>Até 2 horas</option>
+        <option>De 2 a 4 horas</option>
+        <option>Mais de 4 horas</option>
+      </select>
+
+      <label class="chk"><input type="checkbox"> Tenho 18 anos ou mais e li as informações desta página.</label>
+
+      <a class="btn" style="margin-top:18px" href="#">Finalizar no WhatsApp</a>
+    </section>
+
+    <div class="nota">
+      <b>Notas da proposta:</b><br>
+      · A página responde as dúvidas antes do contato, e o WhatsApp fica só para fechar o cadastro.<br>
+      · O formulário já manda experiência e disponibilidade, o que ajuda a priorizar quem está pronta.<br>
+      · Todo número, texto e resposta marcado como exemplo precisa ser trocado pelos dados reais dela.<br>
+      · Prints, vídeos e depoimentos devem ser reais e autorizados por quem aparece. O aviso de que os ganhos variam fica na página.
+    </div>
+  </main>
+
+  <div class="sticky"><a class="btn" href="#contato">Quero começar</a></div>
+</div>
+</body>
+</html>

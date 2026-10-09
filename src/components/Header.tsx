@@ -1,64 +1,51 @@
-import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { Menu, X, Code2 } from "lucide-react";
+import { Menu } from "lucide-react";
 import { useState } from "react";
+import { content } from "@/lib/content";
+import { whatsappUrl } from "@/lib/config";
 
 const navLinks = [
-  { href: "/", label: "Início" },
-  { href: "/servicos", label: "Serviços" },
-  { href: "/precos", label: "Preços" },
-  { href: "/segmentos", label: "Segmentos" },
-  { href: "/contato", label: "Contato" },
+  { href: "#sobre", label: "Sobre" },
+  { href: "#cases", label: "Cases" },
+  { href: "#trabalhos", label: "Trabalhos" },
+  { href: "#mockups", label: "Mockups" },
+  { href: "#servicos", label: "Serviços" },
 ];
 
 const Header = () => {
-  const location = useLocation();
   const [isOpen, setIsOpen] = useState(false);
 
-  const isActive = (path: string) => location.pathname === path;
-
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <header className="sticky top-0 z-50 w-full border-b border-border/50 bg-background/80 backdrop-blur-md">
       <div className="container flex h-16 items-center justify-between">
-        <Link to="/" className="flex items-center gap-2 font-semibold text-lg">
-          <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary text-primary-foreground">
-            <Code2 className="h-4 w-4" />
-          </div>
-          <span className="hidden sm:inline-block">DevStudio</span>
-        </Link>
+        <a href="#inicio" className="flex items-center gap-2.5 font-display font-semibold text-lg tracking-tight">
+          <span className="flex h-8 w-8 items-center justify-center rounded-md bg-primary text-primary-foreground text-xs font-bold">
+            MR
+          </span>
+          <span className="hidden sm:inline-block">{content.brand.studio}</span>
+        </a>
 
-        {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center gap-6">
+        <nav className="hidden md:flex items-center gap-7">
           {navLinks.map((link) => (
-            <Link
+            <a
               key={link.href}
-              to={link.href}
-              className={`text-sm font-medium transition-colors hover:text-primary ${
-                isActive(link.href)
-                  ? "text-primary"
-                  : "text-muted-foreground"
-              }`}
+              href={link.href}
+              className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
             >
               {link.label}
-            </Link>
+            </a>
           ))}
         </nav>
 
-        {/* Desktop CTA */}
         <div className="hidden md:flex items-center gap-4">
           <Button asChild>
-            <a
-              href="https://wa.me/5500000000000?text=Olá! Gostaria de saber mais sobre os serviços."
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href={whatsappUrl(content.cta.message)} target="_blank" rel="noopener noreferrer">
               Quero meu site
             </a>
           </Button>
         </div>
 
-        {/* Mobile Navigation */}
         <Sheet open={isOpen} onOpenChange={setIsOpen}>
           <SheetTrigger asChild className="md:hidden">
             <Button variant="ghost" size="icon">
@@ -66,27 +53,25 @@ const Header = () => {
               <span className="sr-only">Abrir menu</span>
             </Button>
           </SheetTrigger>
-          <SheetContent side="right" className="w-[300px] sm:w-[400px]">
-            <nav className="flex flex-col gap-4 mt-8">
+          <SheetContent side="right" className="w-[300px] sm:w-[360px]">
+            <div className="mt-2 mb-8 font-display font-semibold text-lg">{content.brand.studio}</div>
+            <nav className="flex flex-col gap-4">
               {navLinks.map((link) => (
-                <Link
+                <a
                   key={link.href}
-                  to={link.href}
+                  href={link.href}
                   onClick={() => setIsOpen(false)}
-                  className={`text-lg font-medium transition-colors hover:text-primary ${
-                    isActive(link.href)
-                      ? "text-primary"
-                      : "text-muted-foreground"
-                  }`}
+                  className="text-lg font-medium text-muted-foreground transition-colors hover:text-foreground"
                 >
                   {link.label}
-                </Link>
+                </a>
               ))}
               <Button asChild className="mt-4">
                 <a
-                  href="https://wa.me/5500000000000?text=Olá! Gostaria de saber mais sobre os serviços."
+                  href={whatsappUrl(content.cta.message)}
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={() => setIsOpen(false)}
                 >
                   Quero meu site
                 </a>

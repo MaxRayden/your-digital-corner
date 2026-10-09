@@ -7,7 +7,12 @@ export default {
   theme: {
     container: {
       center: true,
-      padding: "2rem",
+      padding: {
+        DEFAULT: "2.25rem", // 36px — mais ar nas laterais no mobile
+        sm: "2rem",
+        md: "2rem",
+        lg: "2.5rem",
+      },
       screens: {
         "2xl": "1400px",
       },
@@ -76,7 +81,8 @@ export default {
         sm: "calc(var(--radius) - 4px)",
       },
       fontFamily: {
-        sans: ["Inter", "system-ui", "sans-serif"],
+        sans: ["DM Sans", "system-ui", "sans-serif"],
+        display: ["Syne", "system-ui", "sans-serif"],
       },
       keyframes: {
         "accordion-down": {

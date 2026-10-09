@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mockup - Uma Nova Mentalidade</title>
+<style>
+:root{
+  --creme:#F8F2E7;
+  --marrom:#3C2A1E;
+  --terracota:#b85c2e;
+  --areia:#EFE4D2;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;background:#d8d1c4;color:var(--marrom);-webkit-font-smoothing:antialiased}
+.serif{font-family:Georgia,'Times New Roman',serif}
+.wrap{max-width:430px;margin:0 auto;background:var(--creme);min-height:100vh;box-shadow:0 0 40px rgba(0,0,0,.18)}
+.proposta{background:#111;color:#fff;font-size:12px;text-align:center;padding:8px 12px}
+.proposta b{color:#e0a878}
+.hero{padding:32px 22px 28px;text-align:center}
+.tag{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--terracota)}
+.hero h1{font-size:30px;font-weight:normal;margin:10px 0 0;line-height:1.2}
+.hero h1 em{font-style:italic;color:var(--terracota)}
+.hero p{margin:14px auto 0;font-size:15px;line-height:1.5;max-width:320px;color:#6a5a4e}
+.capa{width:160px;aspect-ratio:3/4;margin:22px auto 0;border-radius:8px;background:linear-gradient(160deg,var(--marrom),var(--terracota));box-shadow:0 16px 40px rgba(60,42,30,.25);display:flex;align-items:center;justify-content:center;color:#f8f2e7;font-size:12px;text-align:center;padding:16px;line-height:1.4}
+.btn{display:block;width:100%;max-width:320px;margin:20px auto 0;text-align:center;background:var(--terracota);color:#fff;text-decoration:none;border-radius:999px;padding:15px;font-size:15px;font-weight:600}
+.conteudo{padding:8px 16px 40px}
+.card{background:#fff;border-radius:20px;padding:20px;box-shadow:0 6px 20px rgba(60,42,30,.08);margin-bottom:16px}
+.card h2{font-size:11.5px;letter-spacing:2.2px;text-transform:uppercase;color:var(--terracota);margin-bottom:8px}
+.card h3{font-size:20px;font-weight:normal;margin-bottom:10px}
+.card p,.card li{font-size:14.5px;line-height:1.55;color:#6a5a4e}
+.check{list-style:none;margin-top:10px}
+.check li{padding:8px 0;border-bottom:1px solid var(--areia);display:flex;gap:10px}
+.check i{flex:0 0 22px;height:22px;border-radius:50%;background:var(--marrom);color:#e0a878;font-style:normal;font-size:12px;display:flex;align-items:center;justify-content:center}
+.preco{text-align:center;padding:8px 0}
+.preco .val{font-size:36px;font-family:Georgia,serif;color:var(--marrom)}
+.preco span{display:block;font-size:13px;color:#8a7a6c;margin-top:4px}
+.nota{padding:14px;border:1.5px dashed #c9b4a0;border-radius:12px;font-size:12.5px;line-height:1.5;color:#6b5a4e;background:#fbf6ee;margin-bottom:16px}
+.nota b{color:var(--marrom)}
+.rodape{text-align:center;font-size:12px;color:#9a8a80;padding:6px 0 24px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="proposta"><b>PROPOSTA DE LAYOUT</b> · rascunho para apresentação, não é o site oficial</div>
+  <header class="hero">
+    <div class="tag">Método R.P.F. — página de vendas</div>
+    <h1 class="serif">Uma Nova <em>Mentalidade</em></h1>
+    <p>Guia prático e espiritual para reprogramar a mente através da fé e destravar a coragem de agir.</p>
+    <div class="capa">[ capa do ebook ]</div>
+    <a class="btn" href="#investimento">Quero minha Nova Mentalidade</a>
+  </header>
+  <main class="conteudo">
+    <section class="card">
+      <h2>Dor</h2>
+      <h3 class="serif">Você já tentou mudar… e travou?</h3>
+      <p>Bloco de identificação: o bloqueio não está só ao redor — está nos pensamentos e nas decisões do dia a dia.</p>
+    </section>
+    <section class="card">
+      <h2>O que está incluso</h2>
+      <h3 class="serif">No ebook você encontra</h3>
+      <ul class="check">
+        <li><i>✓</i> Renovação da mente com base na fé</li>
+        <li><i>✓</i> Exercícios práticos de clareza</li>
+        <li><i>✓</i> Caminho para agir com coragem</li>
+      </ul>
+    </section>
+    <section class="card" id="investimento">
+      <h2>Investimento</h2>
+      <div class="preco">
+        <div class="val">R$ —</div>
+        <span>Acesso digital liberado após a compra</span>
+      </div>
+      <a class="btn" href="#">Comprar agora</a>
+    </section>
+    <div class="nota">
+      <b>Notas da proposta:</b><br>
+      · Landing longa: hero → dor → oferta → FAQ → CTA.<br>
+      · Tipografia serif + terracota alinhada ao hub R.P.F.<br>
+      · Site ao vivo disponível no portfólio.
+    </div>
+    <p class="rodape">© Uma Nova Mentalidade · mockup MR Developer</p>
+  </main>
+</div>
+</body>
+</html>

@@ -97,7 +97,7 @@ const ServicosPage = () => {
     },
     {
       title: "Pacote Profissional",
-      price: "R$ 2.000 – R$ 4.000",
+      price: "R$ 8.000 – R$ 4.000",
       description: "Para quem quer uma presença online mais completa e profissional.",
       features: [
         "Até 5 páginas",
