@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 type MockupCardProps = {
   title: string;
   type: string;
-  href: string;
+  href?: string;
   liveUrl?: string;
   previewImage?: string;
 };
@@ -18,7 +18,7 @@ const MockupCard = ({
   previewImage,
 }: MockupCardProps) => {
   const base = import.meta.env.BASE_URL;
-  const mockupSrc = `${base}${href.replace(/^\//, "")}`;
+  const mockupSrc = href ? `${base}${href.replace(/^\//, "")}` : undefined;
   const imageSrc = previewImage
     ? `${base}${previewImage.replace(/^\//, "")}`
     : null;
@@ -27,8 +27,8 @@ const MockupCard = ({
   const imageWrapRef = useRef<HTMLDivElement>(null);
   const imageRef = useRef<HTMLImageElement>(null);
   const [paused, setPaused] = useState(false);
-  const openUrl = liveUrl ?? mockupSrc;
-  const displayUrl = (liveUrl ?? href).replace(/^https?:\/\//, "").replace(/^\//, "");
+  const openUrl = liveUrl ?? mockupSrc ?? "#";
+  const displayUrl = (liveUrl ?? href ?? "").replace(/^https?:\/\//, "").replace(/^\//, "");
 
   // Auto-scroll do iframe (mockups HTML locais)
   useEffect(() => {
@@ -240,14 +240,21 @@ const MockupCard = ({
       </div>
 
       <div className="flex flex-wrap gap-2 p-4 mt-auto">
-        <Button asChild size="sm" className="flex-1 min-w-[120px]">
-          <a href={mockupSrc} target="_blank" rel="noopener noreferrer">
-            <Eye className="h-4 w-4 mr-1.5" />
-            Abrir mockup
-          </a>
-        </Button>
+        {mockupSrc ? (
+          <Button asChild size="sm" className="flex-1 min-w-[120px]">
+            <a href={mockupSrc} target="_blank" rel="noopener noreferrer">
+              <Eye className="h-4 w-4 mr-1.5" />
+              Abrir mockup
+            </a>
+          </Button>
+        ) : null}
         {liveUrl ? (
-          <Button asChild size="sm" variant="outline" className="flex-1 min-w-[120px]">
+          <Button
+            asChild
+            size="sm"
+            variant={mockupSrc ? "outline" : "default"}
+            className="flex-1 min-w-[120px]"
+          >
             <a href={liveUrl} target="_blank" rel="noopener noreferrer">
               <ExternalLink className="h-4 w-4 mr-1.5" />
               Ver ao vivo

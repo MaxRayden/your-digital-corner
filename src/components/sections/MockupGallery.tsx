@@ -23,7 +23,7 @@ const MockupGallery = () => {
               key={mockup.id}
               title={mockup.title}
               type={mockup.type}
-              href={mockup.href}
+              href={"href" in mockup ? mockup.href : undefined}
               liveUrl={"liveUrl" in mockup ? mockup.liveUrl : undefined}
               previewImage={
                 "previewImage" in mockup ? mockup.previewImage : undefined

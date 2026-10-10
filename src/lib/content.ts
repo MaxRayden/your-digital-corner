@@ -203,6 +203,15 @@ export const content = {
       previewFrame: "phone" as const,
       accent: "from-[#2A0A10] to-[#F0C14B]",
     },
+    {
+      id: "loja-online",
+      title: "Loja online",
+      type: "Catálogo · coleções · checkout",
+      liveUrl: "https://loja.gbsemijoias.online/",
+      previewImage: "/images/preview-loja.jpg",
+      previewFit: "contain" as const,
+      accent: "from-[#1a1520] to-[#c9a46a]",
+    },
   ],
 
   packages: [
